@@ -17,6 +17,11 @@ export class App extends React.Component {
     };
   }
 
+  // API CALL
+  search(query) {
+
+  }
+
   render() {
     return(
       <div>
