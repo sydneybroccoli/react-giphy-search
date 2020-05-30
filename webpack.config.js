@@ -13,6 +13,9 @@ module.exports = {
   ],
   devtool: 'sourcemap',
   mode: "development",
+  devServer: {
+    disableHostCheck: true
+  },
   module: {
     rules: [
       {
