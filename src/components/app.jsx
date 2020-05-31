@@ -26,7 +26,8 @@ export class App extends React.Component {
     },
     (error, result) => {
       this.setState({
-        gifs: result.data
+        gifs: result.data,
+        activeGif: result.data[0]
       })
     });
   }
