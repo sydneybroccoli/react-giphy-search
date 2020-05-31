@@ -12,11 +12,11 @@ export class App extends React.Component {
       gifs: [
         { id: 'xTiTnB1aEUVOtf7bQA' },
         { id: 'VqabblvEyrHby' }
-
       ],
       activeGif: { id: 'xTiTnB1aEUVOtf7bQA' }
     };
     this.search = this.search.bind(this);
+    this.select = this.select.bind(this);
   }
 
   // API CALL
@@ -34,6 +34,12 @@ export class App extends React.Component {
     });
   }
 
+  select(id) {
+    this.setState({
+      activeGif: { id: id }
+    })
+  }
+
   render() {
     return(
       <div>
@@ -44,7 +50,7 @@ export class App extends React.Component {
           </div>
         </div>
         <div className="right-scene">
-          <GifList gifs={this.state.gifs}/>
+          <GifList gifs={this.state.gifs} selected={this.select} />
         </div>
       </div>
     );
