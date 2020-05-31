@@ -1,5 +1,6 @@
 #root > div {
   display: flex;
+  flex-direction: column;
   height: 100vh;
 }
 
@@ -33,11 +34,13 @@
     text-align: center;
     display: flex;
     flex-grow: 1;
-    height: calc(100vh - 232px);
+    height: calc(60vh  - 232px);
     background-image: url("data:image/svg+xml,%3Csvg width='52' height='26' viewBox='0 0 52 26' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%239C92AC' fill-opacity='0.22'%3E%3Cpath d='M10 10c0-2.21-1.79-4-4-4-3.314 0-6-2.686-6-6h2c0 2.21 1.79 4 4 4 3.314 0 6 2.686 6 6 0 2.21 1.79 4 4 4 3.314 0 6 2.686 6 6 0 2.21 1.79 4 4 4v2c-3.314 0-6-2.686-6-6 0-2.21-1.79-4-4-4-3.314 0-6-2.686-6-6zm25.464-1.95l8.486 8.486-1.414 1.414-8.486-8.486 1.414-1.414z' /%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
 
     .gif {
-      height: 75%;
+      height: 95%;
+      object-fit: cover;
+
       margin: auto;
       padding: 1em;
       border: 1em black solid;
@@ -51,7 +54,14 @@
   overflow: scroll;
 
   .gif-list {
-    column-count: 2;
+
+    @media (min-width: 320px)  { column-count: 2; }
+    @media (min-width: 480px)  { column-count: 3; }
+    @media (min-width: 768px)  { column-count: 4; }
+    @media (min-width: 992px)  { column-count: 5; }
+    @media (min-width: 1200px) { column-count: 6; }
+    @media (min-width: 1500px) { column-count: 7; }
+
     column-gap: 5px;
     padding: 5px;
 
