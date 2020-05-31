@@ -5,44 +5,55 @@ import { SearchBar } from './searchbar.jsx';
 import { GifList } from './gif_list.jsx';
 import { Gif } from './gif.jsx';
 
+const DEFAULT_SEARCH = "animals";
+const GIPHY_API = 'SzlFIyU01Cjvs0gI1dKIz3lv0y8eMWdq';
+
 export class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
       gifs: [],
-      activeGif: { id: null }
+      activeGif: { id: 'xT9IgDEI1iZyb2wqo8' }
     };
     this.search = this.search.bind(this);
     this.select = this.select.bind(this);
+
+    // DEFAULT VALUES
+    this.default();
   }
 
   // API CALL
   search(query) {
-    giphy('SzlFIyU01Cjvs0gI1dKIz3lv0y8eMWdq').search(
+    giphy({ api_key: GIPHY_API, https: true }).search(
     {
       q: query,
       rating: 'pg-13',
       limit: 15
-    },
-    (error, result) => {
+    }, (error, result) => {
       this.setState({
-        gifs: result.data,
-        activeGif: result.data[0]
+        gifs: result.data
       })
     });
+    console.log(this.state);
   }
 
+  // SELECT GIF
   select(id) {
     this.setState({
       activeGif: { id: id }
     })
   }
 
+  // DEFAULT VALUES
+  default() {
+    this.search(DEFAULT_SEARCH);
+  }
+
   render() {
     return(
       <div>
         <div className="left-scene">
-          <SearchBar query={this.search} value={this.search('animals')} />
+          <SearchBar query={this.search} />
           <div className="active-gif">
             <Gif id={this.state.activeGif.id} />
           </div>

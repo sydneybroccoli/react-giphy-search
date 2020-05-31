@@ -12,7 +12,11 @@ export class SearchBar extends React.Component {
 
   render() {
     return (
-      <input type="text" className="form-search form-control" onKeyUp={this.handleKeyUp} value="animals" />
+      <input
+        type="text"
+        className="form-search form-control"
+        onKeyUp={this.handleKeyUp}
+        placeholder="Search..." />
     );
   }
 }
