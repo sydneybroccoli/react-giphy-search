@@ -33,8 +33,11 @@
     "react-dom": "16.2"
   },
   "scripts": {
-    "start": "webpack-dev-server --mode development",
     "lint": "eslint './src/**/*.js*'",
-    "deploy": "webpack -p && gh-pages -d dist"
+    "dev:start": "webpack-dev-server --open --config webpack.config.js --env.env=dev",
+    "dev:build": "webpack --config webpack.config.js --env.env=dev",
+    "prod:build": "webpack --config webpack.config.js --env.env=prod",
+    "prod:deploy": "git add dist --force && git commit -m \"production\" && git push origin --delete gh-pages && git subtree push --prefix dist origin gh-pages",
+    "prod:emptydeploy": "git add dist --force && git commit --allow-empty -m \"trigger push\" && git push origin --delete gh-pages && git subtree push --prefix dist origin gh-pages"
   }
 }
