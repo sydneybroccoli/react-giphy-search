@@ -10,6 +10,12 @@ export class GifList extends React.Component {
 
   handleClick(event) {
     this.props.selected(event.target.id);
+
+    // TOGGLE ACTIVE CLASS
+    document.querySelectorAll('.selected').forEach((item) => {
+      item.classList.remove('selected');
+    })
+    event.target.classList.add('selected');
   }
 
   render() {
