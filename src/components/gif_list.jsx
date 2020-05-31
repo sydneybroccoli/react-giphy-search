@@ -11,6 +11,7 @@ export class GifList extends React.Component {
   handleClick(event) {
     this.props.selected(event.target.id);
   }
+
   render() {
     return(
       <div className="gif-list">

@@ -9,11 +9,8 @@ export class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      gifs: [
-        { id: 'xTiTnB1aEUVOtf7bQA' },
-        { id: 'VqabblvEyrHby' }
-      ],
-      activeGif: { id: 'xTiTnB1aEUVOtf7bQA' }
+      gifs: [],
+      activeGif: { id: null }
     };
     this.search = this.search.bind(this);
     this.select = this.select.bind(this);
@@ -25,7 +22,7 @@ export class App extends React.Component {
     {
       q: query,
       rating: 'pg-13',
-      limit: 10
+      limit: 15
     },
     (error, result) => {
       this.setState({
