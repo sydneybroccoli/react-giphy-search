@@ -1,38 +1,7 @@
-const HtmlWebpackPlugin = require('html-webpack-plugin');
-const path = require('path');
+const merge = require('webpack-merge');
+const common = require('./webpack_config/webpack.common.js');
 
-module.exports = {
-  mode: "development",
-  devtool: 'sourcemap',
-  devServer: { disableHostCheck: true },
-  module: {
-    rules: [
-      {
-        test: /\.jsx?$/,
-        exclude: /node_modules/,
-        loader: 'babel-loader'
-      },
-      {
-        test: /\.s?css$/,
-        exclude: /node_modules/,
-        loaders: [ 'style-loader', 'css-loader', 'sass-loader' ]
-      },
-      {
-        test: /\.html$/,
-        loader: 'html-loader'
-      },
-    ]
-  },
-  resolve: {
-    extensions: [ '.js', '.jsx' ]
-  },
-  output: {
-    path: path.resolve(__dirname, 'dist'),
-    filename: 'bundle.js'
-  },
-  plugins: [
-    new HtmlWebpackPlugin({
-      template: '!!html-loader!templates/index.html'
-    })
-  ]
+module.exports = ({ env }) => {
+  const enviro = require(`./webpack_config/webpack.${env}.js`);
+  return merge(common, enviro);
 };
