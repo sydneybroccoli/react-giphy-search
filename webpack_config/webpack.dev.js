@@ -5,6 +5,6 @@ module.exports = {
   devtool: 'sourcemap',
   devServer: {
     disableHostCheck: true,
-    contentBase: 'dist'
+    contentBase: './dist'
   }
 };
