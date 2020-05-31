@@ -41,7 +41,7 @@ export class App extends React.Component {
     return(
       <div>
         <div className="left-scene">
-          <SearchBar query={this.search} />
+          <SearchBar query={this.search} value={this.search('animals')} />
           <div className="active-gif">
             <Gif id={this.state.activeGif.id} />
           </div>
