@@ -13,7 +13,7 @@ export class App extends React.Component {
     super(props);
     this.state = {
       gifs: [],
-      activeGif: { id: 'xT9IgDEI1iZyb2wqo8' }
+      activeGif: { id: null }
     };
     this.search = this.search.bind(this);
     this.select = this.select.bind(this);
@@ -34,7 +34,6 @@ export class App extends React.Component {
         gifs: result.data
       })
     });
-    console.log(this.state);
   }
 
   // SELECT GIF
