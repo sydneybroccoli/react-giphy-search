@@ -6,7 +6,7 @@ import { GifList } from './gif_list.jsx';
 import { Gif } from './gif.jsx';
 
 const DEFAULT_SEARCH = "animals";
-const GIPHY_API = 'SzlFIyU01Cjvs0gI1dKIz3lv0y8eMWdq';
+const GIPHY_API = process.env.REACT_APP_GIPHY_API;
 
 export class App extends React.Component {
   constructor(props) {
