@@ -2277,6 +2277,25 @@ domutils@1.5.1:
     dom-serializer "0"
     domelementtype "1"
 
+dotenv-defaults@^1.0.2:
+  version "1.1.1"
+  resolved "https://registry.yarnpkg.com/dotenv-defaults/-/dotenv-defaults-1.1.1.tgz#032c024f4b5906d9990eb06d722dc74cc60ec1bd"
+  integrity sha512-6fPRo9o/3MxKvmRZBD3oNFdxODdhJtIy1zcJeUSCs6HCy4tarUpd+G67UTU9tF6OWXeSPqsm4fPAB+2eY9Rt9Q==
+  dependencies:
+    dotenv "^6.2.0"
+
+dotenv-webpack@^1.8.0:
+  version "1.8.0"
+  resolved "https://registry.yarnpkg.com/dotenv-webpack/-/dotenv-webpack-1.8.0.tgz#7ca79cef2497dd4079d43e81e0796bc9d0f68a5e"
+  integrity sha512-o8pq6NLBehtrqA8Jv8jFQNtG9nhRtVqmoD4yWbgUyoU3+9WBlPe+c2EAiaJok9RB28QvrWvdWLZGeTT5aATDMg==
+  dependencies:
+    dotenv-defaults "^1.0.2"
+
+dotenv@^6.2.0:
+  version "6.2.0"
+  resolved "https://registry.yarnpkg.com/dotenv/-/dotenv-6.2.0.tgz#941c0410535d942c8becf28d3f357dbd9d476064"
+  integrity sha512-HygQCKUBSFl8wKQZBSemMywRWcEDNidvNbjGVyZu3nbZ8qq9ubiPoGLMdRDpfSrpkkm9BXYFkpKxxFX38o/76w==
+
 duplexify@^3.4.2, duplexify@^3.6.0:
   version "3.6.1"
   resolved "https://registry.yarnpkg.com/duplexify/-/duplexify-3.6.1.tgz#b1a7a29c4abfd639585efaecce80d666b1e34125"
@@ -5971,9 +5990,9 @@ typedarray@^0.0.6:
   resolved "https://registry.yarnpkg.com/typedarray/-/typedarray-0.0.6.tgz#867ac74e3864187b1d3d47d996a78ec5c8830777"
 
 ua-parser-js@^0.7.18:
-  version "0.7.19"
-  resolved "https://registry.yarnpkg.com/ua-parser-js/-/ua-parser-js-0.7.19.tgz#94151be4c0a7fb1d001af7022fdaca4642659e4b"
-  integrity sha512-T3PVJ6uz8i0HzPxOF9SWzWAlfN/DavlpQqepn22xgve/5QecC+XMCAtmUNnY7C9StehaV6exjUCI801lOI7QlQ==
+  version "0.7.28"
+  resolved "https://registry.yarnpkg.com/ua-parser-js/-/ua-parser-js-0.7.28.tgz#8ba04e653f35ce210239c64661685bf9121dec31"
+  integrity sha512-6Gurc1n//gjp9eQNXjD9O3M/sMwVtN5S8Lv9bvOYBfKfDNiIIhqiyi01vMBO45u4zkDE420w/e0se7Vs+sIg+g==
 
 uglify-js@3.4.x:
   version "3.4.9"
